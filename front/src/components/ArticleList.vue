@@ -1,5 +1,5 @@
 <template>
-  <v-col>
+  <v-col class="blue lighten-5">
     <v-card
       class="ma-3 d-flex flex-no-wrap justify-space-between align-center"
       v-for="item in artList"
@@ -11,7 +11,7 @@
         <v-img :src="item.img"></v-img>
       </v-avatar> -->
 
-      <v-col>
+      <v-col class="">
         <v-card-title>
           <v-chip color="pink" outlined label class="mr-3 white--text">
             {{
@@ -25,7 +25,7 @@
         <v-card-text class="d-flex align-center">
           <div class="d-flex align-center">
             <v-icon class="mr-1" small>{{ 'mdi-calendar-month' }}</v-icon>
-            <span>{{ item.UpdateAt | dateformat('YYYY-MM-DD') }}</span>
+            <span>{{ item.UpdatedAt | dateformat('YYYY-MM-DD') }}</span>
           </div>
           <div class="mx-4 d-flex align-center">
             <v-icon class="mr-1" small>{{ 'mdi-comment' }}</v-icon>
@@ -40,7 +40,7 @@
     </v-card>
     <div class="text-center">
       <v-pagination
-        color="indigo"
+        color="black"
         total-visible="7"
         v-model="queryParam.pagenum"
         :length="Math.ceil(total / queryParam.pagesize)"
@@ -79,6 +79,7 @@ export default {
       })
       this.artList = res.data
       this.total = res.total
+      console.log(this.artList)
     }
   }
 }

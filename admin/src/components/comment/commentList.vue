@@ -5,10 +5,10 @@
       <el-table :data="tableData" style="width: 100%" border="" stripe="">
         <el-table-column prop="ID" label="ID"></el-table-column>
         <el-table-column prop="CreatedAt" label="评论时间"></el-table-column>
-        <el-table-column
+        <!-- <el-table-column
           prop="article_title"
           label="评论文章"
-        ></el-table-column>
+        ></el-table-column> -->
         <el-table-column prop="username" label="评论者"></el-table-column>
         <el-table-column prop="content" label="评论内容"></el-table-column>
         <el-table-column label="审核状态">
@@ -173,12 +173,12 @@ export default {
     // table每页大小改变
     handleSizeChange(val) {
       this.searchData.pageSize = val;
-      this.getArticleList();
+      this.getCommentList();
     },
     // table页数改变
     handleCurrentChange(val) {
       this.searchData.pageNum = val;
-      this.getArticleList();
+      this.getCommentList();
     },
   },
 };

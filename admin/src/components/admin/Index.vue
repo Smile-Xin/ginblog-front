@@ -1,15 +1,9 @@
 <template>
-  <div>
-    index
-  </div>
+  <div>欢迎来到Blog后台管理系统</div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
-
-</style>
+<style></style>

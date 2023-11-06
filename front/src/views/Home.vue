@@ -1,14 +1,14 @@
 <template>
   <v-app app>
     <TopBar></TopBar>
-
-    <v-main class="grey lighten-3">
+<!-- blackground:../assets/touxiang.jpg -->
+    <v-main class="blue lighten-3" id="bg">
       <v-container>
         <v-row>
-          <v-col cols="12" md="3">
+          <v-col cols="12" md="3" class="">
             <Nav></Nav>
           </v-col>
-          <v-col cols="12" md="9">
+          <v-col cols="12" md="9" >
             <v-sheet min-height="80vh" rounded="lg">
               <router-view :key="$route.path"></router-view>
             </v-sheet>
@@ -29,3 +29,11 @@ export default {
   components: { TopBar, Footer, Nav }
 }
 </script>
+<style>
+#bg{
+  background-image: url('../assets/cat.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+</style>

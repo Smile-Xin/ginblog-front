@@ -11,14 +11,14 @@
         active-text-color="#004d40"
       >
         <!-- 第一个标签  仪表盘 -->
-        <el-menu-item index="1" route="/admin/index">
+        <!-- <el-menu-item index="1" route="/admin/index">
           <template slot="title">
             <i class="el-icon-pie-chart"></i>
             <span>仪表盘</span>
           </template>
-        </el-menu-item>
+        </el-menu-item> -->
 
-          <!-- 第一个标签分类  文章管理 -->
+        <!-- 第一个标签分类  文章管理 -->
         <el-submenu index="2">
           <template slot="title">
             <i class="el-icon-folder-opened"></i>
@@ -52,7 +52,7 @@
           <i class="el-icon-document"></i>
           <span slot="title">评论管理</span>
         </el-menu-item>
-         <!-- 评论管理  -->
+        <!-- 评论管理  -->
         <el-menu-item index="6" route="/admin/profile">
           <i class="el-icon-document"></i>
           <span slot="title">个人简介</span>
@@ -67,8 +67,8 @@ import "element-ui/lib/theme-chalk/display.css";
 export default {
   data() {
     return {
-      def:"2-1",
-    }
+      def: "2-1",
+    };
   },
 };
 </script>

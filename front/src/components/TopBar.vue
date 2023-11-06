@@ -1,14 +1,14 @@
 <template>
   <div>
-    <v-app-bar mobileBreakpoint="sm" app dark flat color="indigo darken-2">
+    <v-app-bar mobileBreakpoint="sm" app dark flat color="black darken-2">
       <v-app-bar-nav-icon dark class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <!-- <v-toolbar-title>
+      <v-toolbar-title>
         <v-app-bar-nav-icon class="mx-15 hidden-md-and-down">
           <v-avatar size="40" color="grey">
-            <img src="../assets/logo.png" alt />
+            <img src="../assets/touxiang.jpg" alt />
           </v-avatar>
         </v-app-bar-nav-icon>
-      </v-toolbar-title> -->
+      </v-toolbar-title>
 
       <v-tabs dark center-active centered class="hidden-sm-and-down" key="$route.fullPath" v-model="selectedTab">
         <v-tab to="/index">index</v-tab>
@@ -41,13 +41,13 @@
         <template v-slot:activator="{ on, attrs }">
           <v-btn v-if="!headers.username" text dark v-bind="attrs" v-on="on">请登录</v-btn>
 
-          <v-btn v-if="headers.username" text dark>欢迎你{{ headers.username }}</v-btn>
+          <v-btn v-if="headers.username" text dark>{{ headers.username }}</v-btn>
           <v-btn class="hidden-md-and-down" v-if="headers.username" text dark @click="loginout">退出</v-btn>
         </template>
 
         <template v-slot:default="dialog">
           <v-card>
-            <v-toolbar color="indigo darken-2" dark>请登录</v-toolbar>
+            <v-toolbar color="black darken-2" dark>请登录</v-toolbar>
             <v-form ref="loginFormRef" v-model="valid">
               <v-card-text class="mt-5">
                 <v-text-field
@@ -82,7 +82,7 @@
         <template v-slot:default="dialog">
           <v-form ref="registerformRef" v-model="registerformvalid">
             <v-card>
-              <v-toolbar color="indigo darken-2" dark>欢迎注册</v-toolbar>
+              <v-toolbar color="black darken-2" dark>欢迎注册</v-toolbar>
               <v-card-text class="mt-5">
                 <v-text-field
                   v-model="formdata.username"

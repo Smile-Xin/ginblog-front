@@ -8,7 +8,7 @@
           'mdi-calendar-month'
           }}
         </v-icon>
-        <span>{{ artInfo.UpdateAt | dateformat('YYYY-MM-DD') }}</span>
+        <span>{{ artInfo.UpdatedAt | dateformat('YYYY-MM-DD') }}</span>
       </div>
       <div class="d-flex mr-10 justify-center">
         <v-icon class="mr-1" color="pink" small>{{ 'mdi-comment' }}</v-icon>
